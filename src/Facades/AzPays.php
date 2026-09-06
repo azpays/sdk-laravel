@@ -48,7 +48,7 @@ class AzPays extends Facade
             throw new \RuntimeException('A facade root has not been set.');
         }
 
-        if (property_exists($instance, $method)) {
+        if (isset($instance->$method)) {
             return $instance->$method;
         }
 

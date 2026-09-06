@@ -38,4 +38,13 @@ class FacadeTest extends TestCase
 
         $this->assertSame($mock, $this->app->make('azpays'));
     }
+
+    public function testFacadeFakeAllowsMethodMocking(): void
+    {
+        $mock = AzPays::fake();
+        $paymentMock = \Mockery::mock(PaymentService::class);
+        $mock->allows('payments')->andReturn($paymentMock);
+
+        $this->assertSame($paymentMock, AzPays::payments());
+    }
 }
