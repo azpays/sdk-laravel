@@ -9,7 +9,7 @@ Official Laravel wrapper for the [AzPays](https://azpays.net) crypto payment pla
 ## Requirements
 
 - **PHP 8.1** or higher
-- **Laravel 10.x** or **11.x**
+- **Laravel 10.x**, **11.x**, or **12.x**
 
 ---
 
